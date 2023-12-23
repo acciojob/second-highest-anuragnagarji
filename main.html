@@ -13,11 +13,15 @@
 			if(arr.length<=1){
 				return "-Infinity";
 			}
-			let firstHigh=arr[0],secondHig=-Infinity;
-			for(let i=1;i<arr.length;i++){
+			let firstHigh=-Infinity,secondHig=-Infinity;
+			for(let i=0;i<arr.length;i++){
 				if(arr[i]>firstHigh){
 					[firstHigh,secondHig]=[arr[i],firstHigh];
-					}}
+					}
+			else if(secondHig<arr[i]){
+                    secondHig=arr[i];
+                }
+			}
 		return secondHig;
 		}
 
