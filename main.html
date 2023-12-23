@@ -8,6 +8,8 @@
 
 <body>	
 	<script>
+
+	
 		function secondHighest(arr1) {
 			let arr=arr1.map(Number)
 			if(arr.length<=1){
@@ -18,9 +20,10 @@
 				if(arr[i]>firstHigh){
 					[firstHigh,secondHig]=[arr[i],firstHigh];
 					}
-			else if(secondHig<arr[i]){
+			else if(secondHig<arr[i]&&arr[i]!=firstHigh){
                     secondHig=arr[i];
                 }
+				
 			}
 		return secondHig;
 		}
